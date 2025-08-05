@@ -1,0 +1,82 @@
+[
+  {
+    "title": "AI Generatif Mengubah Dunia Pendidikan",
+    "body": "AI digunakan untuk membuat materi belajar personalisasi untuk siswa di seluruh dunia.",
+    "date": "2025-07-18",
+    "kategori": ["Teknologi", "AI", "Pendidikan"],
+    "slug": "ai-generatif-mengubah-dunia-pendidikan",
+    "image": "https://images.unsplash.com/photo-1581090700227-1e8d98d9d4ed?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Perkembangan Chip Lokal Indonesia",
+    "body": "Pemerintah mendorong industri lokal membuat chip untuk mengurangi impor.",
+    "date": "2025-07-17",
+    "kategori": ["Teknologi", "Hardware"],
+    "slug": "perkembangan-chip-lokal-indonesia",
+    "image": "https://images.unsplash.com/photo-1581090700226-b7d94c7310f0?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Riset Robotika di Kampus Asia Meningkat",
+    "body": "Banyak kampus di Asia Tenggara mulai meneliti robot untuk pertanian dan kesehatan.",
+    "date": "2025-07-16",
+    "kategori": ["Teknologi", "Robotika"],
+    "slug": "riset-robotika-di-kampus-asia-meningkat",
+    "image": "https://images.unsplash.com/photo-1558898479-33e5d7e4aeff?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Startup IoT Lokal Kembangkan Smart Farming",
+    "body": "Inovasi IoT untuk pertanian cerdas mulai banyak dilirik investor.",
+    "date": "2025-07-15",
+    "kategori": ["Teknologi", "IoT", "Pertanian"],
+    "slug": "startup-iot-lokal-kembangkan-smart-farming",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Cloud Computing Jadi Tulang Punggung UMKM",
+    "body": "UMKM semakin bergantung pada cloud untuk operasional sehari-hari.",
+    "date": "2025-07-14",
+    "kategori": ["Teknologi", "Cloud"],
+    "slug": "cloud-computing-jadi-tulang-punggung-umkm",
+    "image": "https://images.unsplash.com/photo-1605810230434-7631f4aa7c6c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Teknologi Cybersecurity Kian Dibutuhkan",
+    "body": "Ancaman siber yang meningkat membuat perusahaan wajib tingkatkan keamanan data.",
+    "date": "2025-07-13",
+    "kategori": ["Teknologi", "Cybersecurity"],
+    "slug": "teknologi-cybersecurity-kian-dibutuhkan",
+    "image": "https://images.unsplash.com/photo-1611926653458-09294d599f4f?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Desain UI/UX Kunci Aplikasi Pemerintah",
+    "body": "Aplikasi layanan publik makin ramah pengguna berkat fokus pada desain UI/UX.",
+    "date": "2025-07-12",
+    "kategori": ["Teknologi", "Desain", "UX"],
+    "slug": "desain-uiux-kunci-aplikasi-pemerintah",
+    "image": "https://images.unsplash.com/photo-1624382400437-013a6b69c74e?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Low-Code Platform Percepat Prototyping",
+    "body": "Startup kini lebih efisien kembangkan MVP dengan low-code platform.",
+    "date": "2025-07-11",
+    "kategori": ["Teknologi", "Startup", "Low-Code"],
+    "slug": "low-code-platform-percepat-prototyping",
+    "image": "https://images.unsplash.com/photo-1573164574392-3b2d1b91e0c5?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "Mobile App Lokal Tembus Pasar Asia",
+    "body": "Aplikasi buatan developer Indonesia mulai bersaing di tingkat regional.",
+    "date": "2025-07-10",
+    "kategori": ["Teknologi", "Mobile"],
+    "slug": "mobile-app-lokal-tembus-pasar-asia",
+    "image": "https://images.unsplash.com/photo-1600267165898-b125c9c5df66?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "title": "AI untuk Diagnosa Medis Otomatis",
+    "body": "Teknologi AI mulai digunakan untuk deteksi dini penyakit dari hasil medis.",
+    "date": "2025-07-09",
+    "kategori": ["Teknologi", "AI", "Kesehatan"],
+    "slug": "ai-untuk-diagnosa-medis-otomatis",
+    "image": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=1200&q=80"
+  }
+]
