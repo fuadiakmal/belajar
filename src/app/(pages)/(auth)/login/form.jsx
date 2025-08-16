@@ -1,7 +1,13 @@
 "use client";
+
+import { LoginButton } from "@/components/button";
+import { InputText } from "@/components/input";
+import { LoaderSpinner } from "@/components/loader";
+import { action } from "@/lib/db/actions/auth";
+import { toastAlert } from "@/lib/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Form() {
   const [loading, setLoading] = useState(false);
@@ -9,62 +15,66 @@ export default function Form() {
     email: "",
     password: "",
   });
+  const [errors, setErrors] = useState({});
 
   const router = useRouter();
 
   return (
-    <div className="max-w-lg w-full mx-auto p-8 bg-amber-50 shadow-lg rounded-lg space-y-6">
-      <div className="text-xl font-semibold text-center">Login Page</div>
-      <form onSubmit={submitForm} className="flex flex-col gap-6">
-        <div className="flex flex-col gap-4">
-          <input
-            type="text"
-            name="email"
-            value={form?.email}
-            onChange={handleChange}
-            className="py-2 px-4 border rounded-lg"
-            placeholder="Masukkan email"
-          />
-          <input
-            type="password"
-            name="password"
-            value={form?.password}
-            onChange={handleChange}
-            className="py-2 px-4 border rounded-lg"
-            placeholder="Masukkan Password"
-          />
-        </div>
+    <div className="max-w-lg w-full mx-auto bg-primary/5 shadow-lg rounded-lg relative">
+      <LoaderSpinner show={loading} />
+      <div className="p-8 space-y-6">
+        <div className="text-xl font-semibold text-center">Login Page</div>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6 relative">
+          <div className="flex flex-col gap-4">
+            <InputText
+              label="Email"
+              placeholder="email@web.com"
+              name="email"
+              value={form?.email}
+              setValue={setForm}
+              errors={errors}
+            />
+            <InputText
+              label="Password"
+              type="password"
+              name="password"
+              value={form?.password}
+              setValue={setForm}
+              errors={errors}
+            />
+          </div>
 
-        <button
-          disabled={loading}
-          className="bg-amber-500/30 text-gray-800 py-3 px-5 rounded-lg cursor-pointer duration-500 hover:bg-amber-500 hover:text-white"
-        >
-          {loading ? "Login in..." : "Login"}
-        </button>
-      </form>
-      <div className="text-gray-600 flex gap-1">
-        Belum memiliki akun? Daftar
-        <Link href="/register" className="underline text-blue-700">
-          Disini
-        </Link>
+          <LoginButton />
+        </form>
+        <div className="text-gray-600 flex gap-1">
+          Belum memiliki akun? Daftar
+          <Link href="/register" className="underline text-blue-700">
+            Disini
+          </Link>
+        </div>
       </div>
     </div>
   );
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  }
-
-  async function submitForm(event) {
-    event.preventDefault();
-    // aksi loginnya...
+  async function handleSubmit(e) {
     setLoading(true);
-    setTimeout(() => {
-      router.push("/");
-    }, 3000);
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const result = await action(formData);
+
+      if (result.success) {
+        router.push("/admin-panel/dashboard");
+        toastAlert("success", `${result?.data?.nama} berhasil login`);
+      } else {
+        setErrors(result.errors || {});
+        setLoading(false);
+      }
+    } catch (error) {
+      console.log("Gagal:", error);
+      toastAlert("error", "Terjadi kesalahan. Silakan coba lagi.");
+      setLoading(false);
+    }
   }
 }
