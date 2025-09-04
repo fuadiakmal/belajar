@@ -35,11 +35,6 @@ export async function saveProfile(formData) {
       console.log("Gagal menyimpan data:", err);
       return { success: false, message: "Gagal menyimpan data" };
    }
-
-   return {
-      success: true,
-      message: "Data berhasil disimpan.",
-   };
 }
 
 export async function resetPassword(formData) {
